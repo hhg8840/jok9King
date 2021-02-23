@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{#{% load bootstrap4 %}#}
+
+{% block content %}
+    <div style = "text-align: center; max-width: 500px; margin: 4rem auto">
+        <div>
+            <h4>login</h4>
+        </div>
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+{#                {% bootstrap_form form %}#}
+                {{ form }}
+                <input type="submit" class="btn btn-primary">
+                <!--col은 12가 부모크기의 100%-->
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
