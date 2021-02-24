@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div>
+    <div style="border-radius: 1rem; margin: 2rem; text-align: center">
         <h2>
             LIST
         </h2>
@@ -18,9 +18,9 @@
 
         {% if hello_world_list %}
             {% for hello_world in hello_world_list %}
-            <h2>
-                {{ hello_world_list }}
-            </h2>
+            <h4>
+                {{ hello_world.text }}
+            </h4>
             {% endfor %}
         {% endif %}
     </div>
