@@ -10,6 +10,15 @@
             <h2>
                 {{ target_user.username }}
             </h2>
+            {% if target_user == user %}
+            <div style = "margin: 1rem auto 2rem auto;">
+                <a href="{% url 'accountApp:update' pk=target_user.pk %}">
+                    <p>
+                        Change Info
+                    </p>
+                </a>
+            </div>
+            {% endif %}
         </div>
     </div>
 
