@@ -32,14 +32,14 @@ class SubscriptionView(RedirectView):
         return super(SubscriptionView, self).get(request, *args, **kwargs)
 
 
-# @method_decorator(login_required, 'get')
-# class SubscriptionListView(ListView):
-#     model = Article
-#     template_name = 'subscribeApp/list.html'
-#     context_object_name = 'article_list'
-#     paginate_by = 5
-#
-#     def get_queryset(self):
-#         projects = Subscription.objects.filter(user=self.request.user).values_list('project')
-#         article_list = Article.objects.filter(project__in=projects)
-#         return article_list
+@method_decorator(login_required, 'get')
+class SubscriptionListView(ListView):
+    model = Article
+    template_name = 'subscribeApp/list.html'
+    context_object_name = 'article_list'
+    paginate_by = 5
+
+    def get_queryset(self):
+        projects = Subscription.objects.filter(user=self.request.user).values_list('project')
+        article_list = Article.objects.filter(project__in=projects)
+        return article_list
