@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.urls import reverse, reverse_lazy
-from django.views.generic import CreateView, ListView, DetailView  #, DeleteView
+from django.views.generic import CreateView, ListView, DetailView
 from django.views.generic.list import MultipleObjectMixin
 
 from articleApp.models import Article
