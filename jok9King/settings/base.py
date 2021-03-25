@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 import os, environ
-
+from django.contrib.messages import constants as messages
 from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'articleApp',
     'commentApp',
     'projectApp',
-    'subscribeApp'
+    'subscribeApp',
+    'likeApp'
 ]
 
 MIDDLEWARE = [
@@ -46,6 +47,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
 
 ROOT_URLCONF = 'jok9King.urls'
 
