@@ -28,7 +28,8 @@ a {
 }
 
 a:hover {
-    color: gray;
+    text-decoration: none;
+    color: black;
 }
 
 .pragmatic_header_nav {
