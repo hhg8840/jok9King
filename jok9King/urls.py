@@ -32,6 +32,7 @@ urlpatterns = [
     path('projects/', include('projectApp.urls')),
     path('subscribe/', include('subscribeApp.urls')),
     path('likes/', include('likeApp.urls')),
+    path('policy/', include('policy.urls')),
     path(
         'ads.txt',
         RedirectView.as_view(url=staticfiles_storage.url('ads.txt')),
